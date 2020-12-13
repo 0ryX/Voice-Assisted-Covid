@@ -25,7 +25,7 @@ python or python3...
 
 **Other Dependencies not inside requirements.txt**
 
-apt install python3-espeak
-apt install portaudio19-dev python-pyaudio 
+  apt install python3-espeak
+  apt install portaudio19-dev python-pyaudio 
 
 "python-pyaudio" may not install, you will need to use ^^ conda install pyaudio then ^^
