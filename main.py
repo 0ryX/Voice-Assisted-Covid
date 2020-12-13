@@ -50,13 +50,13 @@ class Data:
     def get_list_of_countries(self):
         countries = []
         for country in self.data['country']:
-            countries.append(country['name']).lower()
+            countries.append(country['name'].lower())
 
         return countries
         
 
-data = Data(API_KEY, PROJECT_TOKEN)
-print(data.get_list_of_countries())
+
+#print(data.get_list_of_countries())
 #print(data.get_country_data("usa"))
 
 def speak(text):
@@ -79,6 +79,7 @@ def get_audio():
     
 def main():
     print("Started Program")
+    data = Data(API_KEY, PROJECT_TOKEN)
     END_PHRASE = "Stop"
 
     TOTAL_PATTERNS = {
@@ -92,5 +93,14 @@ def main():
         print("Listening...")
         text = get_audio()
 
+        for pattern, func in TOTAL_PATTERNS.items():
+            if pattern.match(text):
+                result = func()
+                break
+
+            if result:
+                speak(result)
+
         if text.find(END_PHRASE): # Stop loop here
             break
+main()
