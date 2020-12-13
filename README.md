@@ -1,9 +1,9 @@
 # Voice-Assisted-Covid
-###################################################################################################################################
+#####################################################################################################
 
                           Voice Assisted Covid-19 Data Visualization Program in Python
                           
-###################################################################################################################################
+#####################################################################################################
 
 
 This is a project in the making, I have scraped data from https://www.worldometers.info/coronavirus/. This website stores live                          updated corona virus data from all around the world. My plan is to have the most up-to-date stats for countries all over the 
